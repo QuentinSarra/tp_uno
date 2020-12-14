@@ -1,0 +1,10 @@
+{ 
+    "id" : 2,
+    "pioche" : "jusqu'à pouvoir jouer",
+    "poser" : "cumul + 4" ,
+    "main_visible" : true,
+    "carte_speciale" : ["+ 4 menteur","sept"],
+    "temps" : true,
+    "tas" : 1,
+    "nb_carte_de_depart" : 7
+}

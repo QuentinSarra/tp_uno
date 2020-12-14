@@ -1,0 +1,35 @@
+grammar org.xtext.example.mydsluno.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsluno/MyDsl"
+
+Model:
+	uno+=Uno*;
+	
+Uno:
+	'<Uno_Config> <pioche> ' pioche+=Pioche ' </pioche> <poser> ' poser+= Poser ' </poser> <main> ' main+= Main '</main> <carte_speciale> 'cartespe+=CarteSpe' </carte_speciale> '(' <temps> 'temps+=Temps' </temps> ')?' <tas> 'tas+=Tas' </tas> '(' <nb_carte_de_depart> 'nbcarte+=NbCarte' </nb_carte_de_depart> ')?' </Uno_Config>';
+
+	
+Pioche:
+	( ' <une_fois> 'unefois+=UneFois' </une_fois> ') | ('"jusquà pouvoir jouer"') ;
+
+Poser:
+	'"classique couleur chiffre"' | '"cumul + 2"' | '"cumul + 4"' | '"cumul +2 et +4"';
+
+Main :
+	'"visible"' | '"invisible"';
+
+UneFois:
+	'"peut jouer"' | '"passe son tour"' ;
+	
+CarteSpe:
+	('"zero"' | '"sept"' | '"+ 4 menteur"' |'"aucune"') ','*;
+	
+Temps:
+	'"oui"';
+	
+Tas:
+	'"1 tas"' | '"4 tas"';
+	
+NbCarte:
+	'"7 cartes"' | '"10 cartes"';
+	

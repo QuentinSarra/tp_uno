@@ -1,0 +1,10 @@
+{ 
+    "id" : 1,
+    "pioche" : "jusqu'à pouvoir jouer",
+    "poser" : "cumul + 2",
+    "main_visible" : false,
+    "carte_speciale" : ["aucune"],
+    "temps" : false,
+    "tas" : 1,
+    "nb_carte_de_depart" : 7
+} 

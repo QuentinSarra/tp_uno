@@ -1,0 +1,42 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+    "title": "UnoRule",
+    "description": "A rule configuration of the Uno Game",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "pioche":{
+        "type": "string",
+        "enum": ["jusqu'à pouvoir jouer","une fois"]
+      },
+      "poser": {
+        "type": "string",
+        "enum": ["classique couleur chiffre","cumul + 2","cumul + 4","cumul +2 et +4"]
+      },
+      "main_visible": {
+        "type": "boolean"
+      },
+      "cartes_speciales": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "enum": ["aucune","+ 4 menteur","sept","zero"]
+        }
+      },
+      "temps" : {
+        "type": "boolean"
+      },
+      "tas" : {
+          "type" : "integer",
+          "minimum" : 1 
+      },
+      "nb_carte_de_depart" : {
+        "type" : "integer",
+        "minimum" : 3
+      }
+    },
+    "required":["id", "tas", "nb_carte_de_depart","poser"]
+}

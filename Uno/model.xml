@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="legendposition" value="1124,251"/>
+		<graphics key="legendautolayout" value="false"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="2"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Uno">
+			<or mandatory="true" name="pioche">
+				<and name="une_fois">
+					<feature name="passe_tour"/>
+					<feature name="peut_jouer"/>
+				</and>
+				<feature name="jusqua_pouvoir_jouer"/>
+			</or>
+			<or mandatory="true" name="poser">
+				<feature name="classique_couleur_chiffre"/>
+				<feature name="cumulplus2"/>
+				<feature name="cumulplus4"/>
+				<feature name="cumulplus2etplus4"/>
+			</or>
+			<or mandatory="true" name="main">
+				<feature name="visible"/>
+				<feature name="cache"/>
+			</or>
+			<or mandatory="true" name="carte_speciale">
+				<feature name="zero"/>
+				<feature name="plus_4_menteur"/>
+				<feature name="sept"/>
+				<feature name="aucune"/>
+			</or>
+			<or name="temps">
+				<feature name="oui"/>
+				<feature name="non"/>
+			</or>
+			<or mandatory="true" name="tas">
+				<feature name="un_tas"/>
+				<feature name="quatre_tas"/>
+			</or>
+			<or mandatory="true" name="carte_départ">
+				<feature name="septcartes"/>
+				<feature name="dixcartes"/>
+			</or>
+		</and>
+	</struct>
+</featureModel>
